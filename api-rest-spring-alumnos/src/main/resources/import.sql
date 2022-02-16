@@ -14,3 +14,13 @@ INSERT INTO alumnado(nombre, apellido, dni, email, telefono, direccion, cp, comu
 INSERT INTO alumnado(nombre, apellido, dni, email, telefono, direccion, cp, comunidad) VALUES ("David", "Ballesteros", "8374283Q", "relampo@gmail.com", 645529097, "Calle Lugo 2", 28330, 6);
 
 INSERT INTO alumnado(nombre, apellido, dni, email, telefono, direccion, cp, comunidad) VALUES ("Virginia", "Gonzalez", "2674958T", "arllah@gmail.com", 643123097, "AV/ Atocha", 23230, 4);
+
+INSERT INTO usuarios (username,password,enabled) VALUES ('rolando','$2a$10$VTMecMi.QwIynlpyuBHAAenhz9Wg2fEk4VbaOlXn.2xKkCJTMf75u',1);
+INSERT INTO usuarios (username,password,enabled) VALUES ('admin','$2a$10$nSgo1TPH4IQRro7HkVqrBO.cNC1cXrW5Xyhs5u/NwkjeEUh9Bo65G',1);
+
+INSERT INTO roles (nombre) VALUES('ROLE_USER');
+INSERT INTO roles (nombre) VALUES('ROLE_ADMIN');
+
+INSERT INTO usuarios_roles (usuario_id,role_id) VALUES(1,1);
+INSERT INTO usuarios_roles (usuario_id,role_id) VALUES(2,2);
+INSERT INTO usuarios_roles (usuario_id,role_id) VALUES(2,1);
